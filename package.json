@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/jimmyadmsenior/IndexProjectTest/issues"
   },
-  "homepage": "https://github.com/jimmyadmsenior/IndexProjectTest#readme"
+  "homepage": "https://github.com/jimmyadmsenior/IndexProjectTest#readme",
+  "dependencies": {
+    "vue": "^3.5.21"
+  }
 }
