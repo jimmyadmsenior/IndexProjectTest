@@ -54,11 +54,12 @@ html[data-theme="dark"] {
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  max-width: none !important;
+  height: 100vh !important;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -78,15 +79,18 @@ html[data-theme="light"] body {
 }
 
 #app {
-  width: 100%;
+  width: 100vw !important;
+  max-width: none !important;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
 main {
   min-height: calc(100vh - 64px - 260px); /* altura total - navbar - footer */
-  width: 100%;
+  width: 100vw !important;
+  max-width: none !important;
   margin: 0;
   padding: 0;
 }

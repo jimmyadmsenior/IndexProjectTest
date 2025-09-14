@@ -81,10 +81,14 @@ export default {
 
 <style scoped>
 .pagina2-container {
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-section {
@@ -112,9 +116,11 @@ export default {
 }
 
 .content-section {
-  padding: 40px 20px;
-  max-width: 1000px;
+  padding: 30px 20px;
+  max-width: 100%;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .features-grid {
