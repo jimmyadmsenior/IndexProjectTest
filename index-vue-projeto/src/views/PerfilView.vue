@@ -125,16 +125,24 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para a página de perfil */
+/* Estilos para a página de perfil - design limpo para tablet */
 .perfil-container {
-  max-width: 500px;
-  margin: 90px auto 0 auto;
-  background: rgba(30,30,30,0.97);
-  border-radius: 18px;
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
-  padding: 40px 32px 32px 32px;
-  color: #fff;
+  max-width: none;
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 30px;
+  color: #333;
   text-align: center;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .perfil-card {
@@ -142,6 +150,10 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
 }
 
 .perfil-foto-box {
@@ -164,18 +176,23 @@ export default {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid #ddd;
   margin-bottom: 8px;
+  transition: border-color 0.3s;
+}
+
+.perfil-foto-upload-label:hover .perfil-foto-preview {
+  border-color: #3a7bfd;
 }
 
 .upload-btn {
   background: #3a7bfd;
   color: #fff;
-  padding: 6px 18px;
+  padding: 8px 18px;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 
 .upload-btn:hover {
@@ -183,23 +200,44 @@ export default {
 }
 
 .perfil-info {
-  font-size: 1.1rem;
+  font-size: 16px;
   margin-bottom: 12px;
+  color: #555;
+}
+
+.perfil-info strong {
+  color: #333;
+  font-weight: 600;
 }
 
 .perfil-senha-form {
   width: 100%;
+  max-width: 400px;
+}
+
+.perfil-senha-form h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .perfil-senha-form input {
   display: block;
   width: 100%;
-  margin: 8px 0;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 12px 15px;
   border-radius: 8px;
-  border: none;
-  background: #222;
-  color: #fff;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.perfil-senha-form input:focus {
+  outline: none;
+  border-color: #3a7bfd;
 }
 
 .action-button {
@@ -207,10 +245,12 @@ export default {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px 24px;
-  margin-top: 8px;
+  padding: 12px 24px;
+  margin-top: 15px;
   cursor: pointer;
-  transition: background 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
 .action-button:hover {
@@ -222,12 +262,12 @@ export default {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 10px 32px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 24px;
+  transition: background 0.3s;
+  margin-top: 30px;
 }
 
 .logout-button:hover {
@@ -235,23 +275,36 @@ export default {
 }
 
 .alert-success {
-  color: #0f0;
-  margin-top: 10px;
+  color: #27ae60;
+  background: #d5f5d5;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+  border-left: 4px solid #27ae60;
 }
 
 .alert-error {
-  color: #f55;
-  margin-top: 10px;
+  color: #e74c3c;
+  background: #fdd;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+  border-left: 4px solid #e74c3c;
 }
 
-/* Adicionar responsividade */
+/* Responsividade */
 @media (max-width: 600px) {
   .perfil-container {
-    padding: 20px 8px;
+    padding: 20px 15px;
   }
+  
+  .perfil-card {
+    padding: 20px;
+  }
+  
   .perfil-foto-preview {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
 }
 </style>
