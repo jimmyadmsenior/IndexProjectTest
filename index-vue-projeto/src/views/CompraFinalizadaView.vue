@@ -230,6 +230,9 @@ export default {
   padding: 20px;
   overflow-y: auto;
   height: calc(100% - 64px - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .compra-content {
@@ -237,7 +240,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  width: 100%;
 }
 
 .confirmation-container {
