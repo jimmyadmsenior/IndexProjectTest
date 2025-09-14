@@ -237,7 +237,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 **Jimmy Castilho**
 - GitHub: [@jimmyadmsenior](https://github.com/jimmyadmsenior)
-- LinkedIn: [Jimmy Castilho](https://linkedin.com/in/jimmy-castilho)
+- LinkedIn: [Jimmy Castilho](https://www.linkedin.com/in/jimmy-castilho-003733270/)
 
 ---
 
