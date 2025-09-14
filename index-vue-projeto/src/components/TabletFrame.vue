@@ -121,7 +121,7 @@ export default {
   height: 600px;
   background: #1a1a1a;
   border-radius: 25px;
-  padding: 15px;
+  padding: 8px;
   box-shadow: 
     0 0 60px rgba(0, 0, 0, 0.4),
     inset 0 2px 15px rgba(255, 255, 255, 0.1),
@@ -133,10 +133,10 @@ export default {
 .tablet-screen::before {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
   border-radius: 20px;
   background: linear-gradient(145deg, #333, #111);
   z-index: 1;
@@ -146,7 +146,7 @@ export default {
   width: 100%;
   height: 100%;
   background: #000;
-  border-radius: 15px;
+  border-radius: 18px;
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -169,14 +169,29 @@ export default {
   width: 100%;
   height: 100%;
   background: #f8f9fa;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 15px;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 18px;
+  padding: 10px;
 }
 
 .page-content::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+
+.page-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.page-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 .loading-screen {
