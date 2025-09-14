@@ -33,11 +33,11 @@
           👤 Perfil
         </button>
         <button 
-          @click="switchPage('pagina2')" 
-          :class="{ active: currentPage === 'pagina2' }"
+          @click="switchPage('compra-finalizada')" 
+          :class="{ active: currentPage === 'compra-finalizada' }"
           class="switch-btn"
         >
-          🚀 Projeto
+          ✅ Compra
         </button>
       </div>
     </div>
@@ -46,13 +46,13 @@
 
 <script>
 import PerfilView from '../views/PerfilView.vue'
-import Pagina2View from '../views/Pagina2View.vue'
+import CompraFinalizadaView from '../views/CompraFinalizadaView.vue'
 
 export default {
   name: 'TabletFrame',
   components: {
     PerfilView,
-    Pagina2View
+    CompraFinalizadaView
   },
   props: {
     initialPage: {
@@ -70,8 +70,8 @@ export default {
       switch (this.currentPage) {
         case 'perfil':
           return 'PerfilView'
-        case 'pagina2':
-          return 'Pagina2View'
+        case 'compra-finalizada':
+          return 'CompraFinalizadaView'
         default:
           return null
       }

@@ -40,13 +40,13 @@
             </div>
             
             <div 
-              @click="goToTabletView('pagina2')" 
+              @click="goToTabletView('compra-finalizada')" 
               class="menu-item"
               @mouseenter="playHoverSound"
             >
               <span class="menu-number">[2]</span>
-              <span class="menu-text">Projeto Inovador</span>
-              <span class="menu-desc">// Demonstração de tecnologias</span>
+              <span class="menu-text">Compra Finalizada</span>
+              <span class="menu-desc">// Sistema de confirmação de compra</span>
             </div>
           </div>
         </div>
