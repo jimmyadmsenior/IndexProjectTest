@@ -8,6 +8,12 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/tablet/:page',
+    name: 'tablet-view',
+    component: () => import('../views/TabletView.vue'),
+    props: true
+  },
+  {
     path: '/perfil',
     name: 'perfil',
     component: () => import('../views/PerfilView.vue')

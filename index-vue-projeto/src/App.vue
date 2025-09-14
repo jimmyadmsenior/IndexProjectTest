@@ -7,17 +7,23 @@ export default {
   components: {
     NavBar,
     FooterComponent
+  },
+  computed: {
+    shouldShowLayout() {
+      // Não mostrar navbar e footer nas páginas do tablet ou na home com tema de programação
+      return !this.$route.path.includes('/tablet') && this.$route.name !== 'home'
+    }
   }
 }
 </script>
 
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar v-if="shouldShowLayout" />
     <main>
       <router-view />
     </main>
-    <FooterComponent />
+    <FooterComponent v-if="shouldShowLayout" />
   </div>
 </template>
 
@@ -47,6 +53,14 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, var(--background-color) 0%, #e0e0e0 100%);
@@ -63,8 +77,18 @@ html[data-theme="light"] body {
   background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
 }
 
+#app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 main {
   min-height: calc(100vh - 64px - 260px); /* altura total - navbar - footer */
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .theme-transition {
