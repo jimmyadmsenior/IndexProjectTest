@@ -117,8 +117,8 @@ export default {
 }
 
 .tablet-screen {
-  width: 800px;
-  height: 600px;
+  width: 1100px;
+  height: 800px;
   background: #1a1a1a;
   border-radius: 25px;
   padding: 8px;
@@ -155,10 +155,10 @@ export default {
 
 .home-indicator {
   position: absolute;
-  bottom: 10px;
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  width: 140px;
+  width: 180px;
   height: 4px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;

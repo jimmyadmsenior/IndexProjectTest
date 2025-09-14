@@ -17,14 +17,8 @@
             </ul>
           </nav>
           <div class="navbar-actions">
-            <a href="#" class="navbar-btn" title="Sacola">
-              <i class="fas fa-shopping-bag"></i>
-            </a>
             <a href="#" class="navbar-btn navbar-btn-border">Login</a>
             <a href="#" class="navbar-btn navbar-btn-border">Cadastro</a>
-            <a href="#" class="navbar-btn" title="Meu perfil">
-              <i class="fas fa-user"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -248,12 +242,12 @@ export default {
 
 .navbar-layout {
   display: grid;
-  grid-template-columns: 1.2fr auto 1fr;
+  grid-template-columns: 1.2fr auto 1.2fr;
   align-items: center;
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 40px;
   height: 64px;
   box-sizing: border-box;
 }
@@ -275,7 +269,7 @@ export default {
 
 .navbar-menu ul {
   display: flex;
-  gap: 32px;
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -297,7 +291,7 @@ export default {
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 24px;
   justify-self: end;
 }
 
@@ -327,16 +321,16 @@ export default {
 /* Main content no tablet */
 .tablet-main {
   flex: 1;
-  padding: 10px;
+  padding: 20px;
   overflow-y: auto;
-  height: calc(100% - 64px - 120px); /* Total - navbar - footer */
+  height: calc(100% - 64px - 140px); /* Total - navbar - footer */
 }
 
 .tablet-title {
   color: #333;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   text-align: center;
 }
 
@@ -351,28 +345,28 @@ export default {
 .tablet-footer {
   background: #f8f9fa;
   border-top: 1px solid #dee2e6;
-  padding: 15px 10px 10px;
+  padding: 25px 20px 15px;
   margin-top: auto;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 25px;
   max-width: 100%;
   margin: 0 auto;
 }
 
 .footer-logo p {
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #333;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .github-icon {
-  height: 18px;
+  height: 22px;
   width: auto;
   transition: opacity 0.3s;
 }
@@ -384,17 +378,17 @@ export default {
 .footer-section h4 {
   color: #333;
   font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
+  margin-bottom: 12px;
+  font-size: 1rem;
 }
 
 .footer-section a {
   display: block;
   color: #666;
   text-decoration: none;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   transition: color 0.3s;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .footer-section a:hover {
@@ -403,59 +397,59 @@ export default {
 
 .copy {
   text-align: center;
-  padding-top: 8px;
-  margin-top: 15px;
+  padding-top: 15px;
+  margin-top: 20px;
   border-top: 1px solid #dee2e6;
 }
 
 .copy p {
   color: #666;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 /* Ajustes específicos para elementos no modo tablet */
 .tablet-mode .perfil-foto-preview {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 }
 
 .tablet-mode .upload-btn {
-  font-size: 0.85rem;
-  padding: 5px 12px;
+  font-size: 1rem;
+  padding: 8px 16px;
 }
 
 .tablet-mode .action-button {
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  margin: 4px 0;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 8px 0;
 }
 
 .tablet-mode .logout-button {
-  font-size: 0.85rem;
-  padding: 6px 16px;
+  font-size: 1rem;
+  padding: 10px 24px;
 }
 
 .tablet-mode .perfil-info p {
-  font-size: 0.9rem;
-  margin: 4px 0;
+  font-size: 1rem;
+  margin: 8px 0;
 }
 
 .tablet-mode .perfil-senha-form h2 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
 .tablet-mode .perfil-senha-form input {
-  font-size: 0.85rem;
-  padding: 6px 8px;
-  margin: 3px 0;
+  font-size: 1rem;
+  padding: 10px 12px;
+  margin: 6px 0;
 }
 
 .tablet-mode .alert-success,
 .tablet-mode .alert-error {
-  font-size: 0.85rem;
-  padding: 8px;
-  margin: 8px 0;
+  font-size: 1rem;
+  padding: 12px;
+  margin: 12px 0;
 }
 
 h1 {
@@ -504,16 +498,16 @@ h1 {
 /* Cartão no modo tablet */
 .tablet-mode .perfil-card {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   background: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 15px;
+  padding: 25px;
   margin: 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
 }
 
 /* Para telas grandes (desktop), quando acessado diretamente */
