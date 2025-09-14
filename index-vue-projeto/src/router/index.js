@@ -19,9 +19,9 @@ const routes = [
     component: () => import('../views/PerfilView.vue')
   },
   {
-    path: '/pagina2',
-    name: 'pagina2',
-    component: () => import('../views/Pagina2View.vue')
+    path: '/compra-finalizada',
+    name: 'compra-finalizada',
+    component: () => import('../views/CompraFinalizadaView.vue')
   }
 ]
 
