@@ -216,7 +216,7 @@ export default {
   justify-content: center;
 }
 
-/* Modo tablet - sem fundo colorido */
+/* Modo tablet - fundo normal */
 .perfil-container.tablet-mode {
   background: #fff !important;
   padding: 0;
@@ -452,6 +452,33 @@ export default {
   margin: 12px 0;
 }
 
+/* Centralização dos botões no modo tablet */
+.tablet-mode .action-button,
+.tablet-mode .logout-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Ajustes de cores para o fundo preto do cartão */
+.tablet-mode .perfil-info p {
+  color: #fff;
+}
+
+.tablet-mode .perfil-senha-form h2 {
+  color: #fff;
+}
+
+.tablet-mode .perfil-senha-form input {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.tablet-mode .perfil-senha-form input::placeholder {
+  color: #ccc;
+}
+
 h1 {
   color: #fff;
   margin: 0 0 20px 0;
@@ -497,17 +524,18 @@ h1 {
 
 /* Cartão no modo tablet */
 .tablet-mode .perfil-card {
-  width: 100%;
-  max-width: 700px;
-  background: #fff;
-  border: 1px solid #e0e0e0;
+  width: 32%;
+  max-width: 280px;
+  background: #000;
+  border: 1px solid #333;
   border-radius: 8px;
-  padding: 25px;
-  margin: 0;
+  padding: 15px;
+  margin: 0 auto;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
+  color: #fff;
 }
 
 /* Para telas grandes (desktop), quando acessado diretamente */
@@ -633,7 +661,8 @@ h1 {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;
-  margin-top: 8px;
+  margin: 8px auto 0 auto;
+  display: block;
 }
 
 .action-button:hover {
@@ -650,7 +679,8 @@ h1 {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
+  display: block;
 }
 
 .logout-button:hover {
