@@ -1,5 +1,10 @@
 <template>
   <div :class="['compra-container', { 'tablet-mode': isTabletMode }]">
+    <!-- Efeito de confetes -->
+    <div class="confetti-container">
+      <div v-for="n in 50" :key="n" class="confetti" :style="getConfettiStyle(n)"></div>
+    </div>
+
     <!-- Navbar para modo tablet -->
     <header v-if="isTabletMode" class="tablet-navbar">
       <div class="navbar-content">
@@ -94,9 +99,24 @@ export default {
     voltarHome() {
       this.$router.push('/');
     },
+    getConfettiStyle(index) {
+      const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      const randomDelay = Math.random() * 1; // atraso de 0 a 1 segundo (reduzido de 3)
+      const randomDuration = 1.5 + Math.random() * 1; // duração de 1.5 a 2.5 segundos (reduzido de 3-5)
+      const randomX = Math.random() * 100; // posição horizontal de 0 a 100%
+      const randomRotation = Math.random() * 360; // rotação aleatória
+      
+      return {
+        backgroundColor: randomColor,
+        left: randomX + '%',
+        animationDelay: randomDelay + 's',
+        animationDuration: randomDuration + 's',
+        transform: `rotate(${randomRotation}deg)`
+      };
+    },
     startConfetti() {
       // Simular confetti para o modo tablet
-      // Pode ser implementado com uma biblioteca como canvas-confetti
       console.log('Confetti animation started!');
     }
   }
@@ -402,5 +422,62 @@ p {
     max-width: 500px;
     padding: 60px 40px;
   }
+}
+
+/* Efeito de confetes */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 500;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  border-radius: 50%;
+  animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Variações dos confetes */
+.confetti:nth-child(odd) {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.confetti:nth-child(even) {
+  width: 6px;
+  height: 12px;
+  border-radius: 1px;
+}
+
+.confetti:nth-child(3n) {
+  width: 12px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.confetti:nth-child(4n) {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
 }
 </style>
