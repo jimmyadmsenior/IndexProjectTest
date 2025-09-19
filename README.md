@@ -59,6 +59,47 @@
 - **Confetti Effect**: Animação de confetes em CSS/JS
 - **Responsive Design**: Adaptação total para múltiplos dispositivos
 
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#" title="defina o título do link">
+        <img src="https://avatars.githubusercontent.com/u/142106079?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <b>Jimmy Castilho</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#" title="defina o título do link">
+        <img src="https://avatars.githubusercontent.com/u/173830808?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <sub>
+          <b>Lívia Clemente</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#" title="defina o título do link">
+        <img src="https://avatars.githubusercontent.com/u/173830871?v=4" width="100px;" alt="Foto do Steve Jobs"/><br>
+        <sub>
+          <b>Ana Clara</b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="#" title="defina o título do link">
+        <img src="https://avatars.githubusercontent.com/u/173830932?v=4" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <sub>
+          <b>Pedro Rodrigues</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## 📁 Estrutura do Projeto
 
 ```
